@@ -1,0 +1,56 @@
+{
+    "author": {
+        "name": "Mike Rodrigues",
+        "email": "rodrigues.mi@husky.neu.edu"
+    },
+    "name": "proxy-package",
+    "description": "A JSON to CSV and CSV to JSON converter that natively supports sub-documents and auto-generates the CSV heading.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mrodrig/proxy-package.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mrodrig/json-2-csv/issues"
+    },
+    "bin": {
+        "json2csv": "./bin/json2csv.js",
+        "csv2json": "./bin/csv2json.js"
+    },
+    "main": "./src/converter.js",
+    "scripts": {
+        "test": "mocha test/tests.js",
+        "coverage": "nyc --reporter=lcov --reporter=text-summary --reporter=text _mocha",
+        "lint": "npm run lint:eslint && npm run lint:tslint",
+        "lint:eslint": "eslint src bin test",
+        "lint:tslint": "tslint -c tslint.json 'src/**/*.ts'"
+    },
+    "keywords": [
+        "json",
+        "to",
+        "csv",
+        "converter",
+        "export",
+        "json2csv",
+        "csv2json",
+        "parse",
+        "parser",
+        "json-2-csv",
+        "csv-2-json",
+        "cli"
+    ],
+    "dependencies": {
+        "axios": "0.18.0",
+        "cheerio": "^0.22.0"
+    },
+    "devDependencies": {
+        "eslint": "5.16.0",
+        "nyc": "14.0.0",
+        "mocha": "6.1.4",
+        "should": "13.2.3"
+    },
+    "engines": {
+        "node": ">= 6"
+    },
+    "license": "MIT"
+}
